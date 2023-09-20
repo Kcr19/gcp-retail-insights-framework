@@ -1,2 +1,2 @@
-# rcim
-Retail Insights Canonical Model for Supply Chain
+# Retail Insights Canonical Framework for Supply Chain
+
