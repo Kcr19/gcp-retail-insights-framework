@@ -1,0 +1,72 @@
+[
+  {
+    "name": "OrderId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "OrderLine",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ProductId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "SellingPrice",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "OrderQuantity",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PromisedQuantity",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "DeliveredQuantity",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "LineGrossAmount",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "LineTaxAmount",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "LineDiscountAmount",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "LineNetAmount",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "CreateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateCount",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "PONumber",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "POType",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "OrderDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "EarliestShipDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "LatestShipDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "SupplierId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ShipToNode",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Status",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "GrossAmount",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "TaxAmount",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "DiscountAmount",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "NetAmount",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "CreateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateCount",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "name": "AssociateId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "EffectiveDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PIIToken",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "SkillTier",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Novice, Trainee, Beginner, Experienced, Expert"
+  },
+  {
+    "name": "AvgRateMin",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "CreateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateCount",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  }
+]

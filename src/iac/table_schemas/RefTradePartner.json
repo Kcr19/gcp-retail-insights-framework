@@ -1,0 +1,72 @@
+[
+    {
+    "name": "TradePartnerId",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Unique ID for this entity"
+    },
+    {
+    "name": "PartnerType",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Supplier, Manufacturer, Carrier"
+    },
+    {
+    "name": "PIIToken",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Pointer to any sensitive PII/PCI-DSS/GDPR/HIPAA type date"
+    },
+    {
+    "name": "GLNNumber",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Global location number"
+    },
+    {
+    "name": "DNBNumber",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Dun and Bradstreet number"
+    },
+    {
+    "name": "QCRating",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+    },
+    {
+    "name": "City",
+    "type": "STRING",
+    "mode": "NULLABLE"
+    },
+    {
+    "name": "State",
+    "type": "STRING",
+    "mode": "NULLABLE"
+    },
+    {
+    "name": "Zip",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+    },
+    {
+    "name": "Country",
+    "type": "STRING",
+    "mode": "NULLABLE"
+    },
+    {
+    "name": "CreateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+    },
+    {
+    "name": "UpdateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+    },
+    {
+    "name": "UpdateCount",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+     }
+]

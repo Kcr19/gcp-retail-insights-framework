@@ -1,0 +1,76 @@
+[
+  {
+    "name": "TaskId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "EffectiveDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Name",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "WorkUnit",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },{
+    "name": "AvgDuration",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Tier1Duration",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Tier2Duration",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Tier3Duration",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Tier4Duration",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Tier5Duration",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "EquipmentType",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "EquipmentLeadTimeMin",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "CreateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateCount",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  }
+]

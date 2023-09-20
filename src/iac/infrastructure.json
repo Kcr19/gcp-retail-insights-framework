@@ -1,0 +1,16 @@
+{
+  "names": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "keerthi-demo_retail_if_9raw": "string",
+        "keerthi-demo_retail_if_9sample": "string"
+      }
+    ],
+    "value": {
+      "keerthi-demo_retail_if_9raw": "keerthi-demo_retail_if_9raw",
+      "keerthi-demo_retail_if_9sample": "keerthi-demo_retail_if_9sample"
+    }
+  }
+}

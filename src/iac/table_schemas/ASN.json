@@ -1,0 +1,102 @@
+[
+    {
+        "name": "ASNNumber",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "ASNDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "PONumber",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "ShipDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "CarrierId",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "TransportMode",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "TransportId",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "TransportRouteId",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "TransportStopId",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "DestinationNode",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "BOLNumber",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "CertOrigin",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "CustomsDecl",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "GrossAmount",
+        "type": "FLOAT64",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "TaxAmount",
+        "type": "FLOAT64",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "DiscountAmount",
+        "type": "FLOAT64",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "NetAmount",
+        "type": "FLOAT64",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "CreateDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "UpdateDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "UpdateCount",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    }
+]

@@ -1,0 +1,213 @@
+[
+  {
+    "name": "PIIToken",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Supplied or auto-generaged token"
+  },
+  {
+    "name": "UniqueID",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Any uniquely identifiable info"
+  },
+  {
+    "name": "FirstName",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "LastName",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Image",
+    "type": "BYTES",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Gender",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Pronoun",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Race",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Email",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "LoyaltyJoinDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Company",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "JobPosition",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "JoinDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "JobID",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "SSN",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Passport",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "DriverLicense",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Wallet",
+    "type": "JSON",
+    "mode": "NULLABLE",
+    "description": "Stored payment types. JSON elements are (card, number, exp, cvv)"
+  },
+  {
+    "name": "DOB",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Cell",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "VIN",
+    "type": "JSON",
+    "mode": "NULLABLE",
+    "description": "Owned vehicles. JSON elements: (vin,make,model,year,color,registration)"
+  },
+  {
+    "name": "AddressBook",
+    "type": "JSON",
+    "mode": "NULLABLE",
+    "description": "If multiple address needs to be stored"
+  },
+  {
+    "name": "Address1",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Address2",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "City",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "State",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Zip",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Country",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Geoloc",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "DeviceSerialNo",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "MACAddress",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "IPAddress",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "DeviceID",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Cookies",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "LoginID",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "OAuthToken",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "External auth token"
+  },
+  {
+    "name": "Password",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PwdLastChanged",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "CreateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateCount",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+  "name": "CustomerId",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "CustomerType",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "OrgName",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "LoyaltyId",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "LoyaltyTier",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "PIIToken",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "City",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "State",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "Zip",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "Country",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "CreateDate",
+  "type": "TIMESTAMP",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "UpdateDate",
+  "type": "TIMESTAMP",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "UpdateCount",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  }
+]

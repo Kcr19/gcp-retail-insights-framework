@@ -1,0 +1,323 @@
+[
+  {
+    "name": "ProductId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "EffectiveDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Name",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "DefaultCostPrice",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "DefaultBasePrice",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "DefaultSellingPrice",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "GPCSegment",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "GPCFamily",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "GPCClass",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "GPCBrick",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Division",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Department",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Class",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "SubClass",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Style",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Color",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Size",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Brand",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Model",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ModelYear",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ProductIntroDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "TradePartnerId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UPC",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "GTINNumber",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "MPNNumber",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PLUCode",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "BuyUom",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "MoveUom",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "SellUom",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "TargetGender",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "GoogleMCBrand",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PrepackQuantity",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "InnerPackQuantity",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ExpirationDuration",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "HazmatClass",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "HazmatSubClass",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "MinAgeVerify",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PerishableCode",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "TemperatureCode",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "IsPerishable",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "IsTempratureControlled",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "IsSecureStored",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "IsDurable",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "IsSoftGoods",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "IsVirtual",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "IsConveyable",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+
+  {
+    "name": "SeasonCode",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PeakSeasonStart",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PeakSeasonEnd",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "IsSerialized",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "IsWICEligible",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "IsFragile",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "TareHeight",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "TareWidth",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "TareLength",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "TareWeight",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PackageHeight",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PackageWidth",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PackageLength",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "PackageWeight",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "LandedCost",
+    "type": "FLOAT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "CreateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "UpdateCount",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  }
+]
