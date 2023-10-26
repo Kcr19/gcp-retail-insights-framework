@@ -22,9 +22,9 @@ resource "random_id" "id" {
 
 # Create buckets
 module "gcs" {
-  project       = var.project
-  for_each = toset(["${var.project}_retail_if_9raw",
-  "${var.project}_retail_if_9sample"])
+  project = var.project
+  for_each = toset(["${var.project}_retail_if_raw",
+  "${var.project}_retail_if_sample"])
   source              = "./modules/gcs"
   name                = each.value
   location            = local.location
@@ -42,8 +42,8 @@ module "create_bq_datasets" {
   description   = local.dataset_description
   location      = var.rcim_dataset[count.index]["location"]
   project       = var.project
-  environment  = local.env
-  project_name = var.project
+  environment   = local.env
+  project_name  = var.project
 
 }
 
