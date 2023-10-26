@@ -1,0 +1,22 @@
+[
+    {
+        "table_name": "PO",
+        "keys": "POType,Status,ShipToNode"
+    },
+    {
+        "table_name": "POStatusUpdates",
+        "keys": "Status,PONumber"
+    },
+    {
+        "table_name": "POLine",
+        "keys": "ShipToNode,PONumber"
+    },
+    {
+        "table_name": "ASN",
+        "keys": "PONumber,ASNNumber"
+    },
+    {
+        "table_name": "ASNLine",
+        "keys": "PONumber,ASNNumber"
+    }
+]
