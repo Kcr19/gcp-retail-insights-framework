@@ -72,6 +72,18 @@ def process_data():
     load_to_gcs(bukcet_name="_retail_if_sample/", output_folder="./datagen/outputs/clean")
 
 
+# Create Clustering
+def create_bq_clustering():
+    os.chdir("./datagen/tables")
+    f = open('clustering.json')
+    print('Creating Clustering')
+    clustering_data = json.load(f)
+    for i in clustering_data:
+        process = Popen("bq update --clustering_fields="+i['keys']+" retail_dataset."+i['table_name']+" ", shell=True)
+        process.wait()
+    os.chdir("../../")
+
+
 # Load data to Big Query
 def bq_loader():
     print("Load data to BigQuery")
@@ -92,7 +104,9 @@ def run():
     build_infrastructure()
     generate_data()
     process_data()
+    create_bq_clustering()
     bq_loader()
+    
 
 
 if __name__ == "__main__":
