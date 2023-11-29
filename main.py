@@ -100,13 +100,64 @@ def bq_loader():
     print("Job ran successfully!")
 
 
+# Create views
+def create_view():
+    print("Creating Views")
+    client = bigquery.Client()
+   
+    # Get project id
+    project_id = get_project_id()
+    table_id = project_id+".retail_dataset."
+    
+    # Create view Id
+    view_id = table_id+"rcim_po_visibility"
+    view = bigquery.Table(view_id)
+    
+    view_sql = f"""SELECT po.PONumber AS po_num, po.POType AS po_type,
+    po.POType AS po_type,
+    po.OrderDate AS po_order_dt,
+    po.NetAmount AS po_order_amt,
+    po.CreateDate AS po_create_dt,
+    po_status.UpdateDate AS po_upd_dt,
+    po_status.POLine AS po_upd_po_line,
+    COALESCE(po_status.Status,'N/A') AS po_upd_status,
+    COALESCE(po_line.ProductId,'N/A') AS po_line_prod_id,
+    COALESCE(po_line.ShipToNode,0) AS po_line_ship_to_node,
+    COALESCE(po_line.OrderQuantity,0) AS po_line_order_qty,
+    COALESCE(asn.ASNNumber,'N/A') AS asn_num,
+    COALESCE(asn_line.POLine,0) AS asn_po_line,
+    COALESCE(asn_line.PromiseQty,0) AS asn_promise_qty,
+    COALESCE(asn_line.ShippedQty,0) AS asn_shipped_qty,
+    COALESCE(ref_node.NodeId,'N/A') AS ref_node_id,
+    COALESCE(ref_node.Type,'N/A') AS ref_node_type
+    FROM
+    `{table_id}PO` po
+    LEFT JOIN `{table_id}POStatusUpdates` po_status
+    ON po.PONumber = po_status.PONumber
+    LEFT JOIN `{table_id}POLine` po_line
+    ON po.PONumber = po_line.PONumber
+    LEFT JOIN `{table_id}ASN` asn
+    ON po.PONumber = asn.PONumber
+    LEFT JOIN `{table_id}ASNLine` asn_line
+    ON po.PONumber = asn_line.PONumber
+    LEFT JOIN `{table_id}RefNode` ref_node
+    ON po.ShipToNode = ref_node.NodeId"""
+
+    # Create view
+    view.view_query = view_sql
+
+    # Make an API request to create the view.
+    view = client.create_table(view)
+    print(f"Created {view.table_type}: {str(view.reference)}")
+
+
 def run():
     build_infrastructure()
     generate_data()
     process_data()
     create_bq_clustering()
     bq_loader()
-    
+    create_view()
 
 
 if __name__ == "__main__":
