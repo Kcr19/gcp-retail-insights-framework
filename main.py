@@ -113,7 +113,7 @@ def create_view():
     view_id = table_id+"rcim_po_visibility"
     view = bigquery.Table(view_id)
     
-    view_sql = f"""SELECT po.PONumber AS po_num, po.POType AS po_type,
+    view_sql = f"""SELECT po.PONumber AS po_num,
     po.POType AS po_type,
     po.OrderDate AS po_order_dt,
     po.NetAmount AS po_order_amt,
