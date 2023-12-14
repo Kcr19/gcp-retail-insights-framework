@@ -48,7 +48,21 @@ cd into the RetailModel folder [Time: 5 mins]\
 **Deleting Retail Model Infrastructure (optional)** \
 If for any reason, data is missing or if you would like to delete the Google Cloud resources created, run the below code in your terminal. \ Reference 
 cd into src/iac to run terraform destroy \
-``terraform destroy -var "project=<your-project-name>"``
+``terraform destroy -var "project=<your-project-name>"`` \
 
+**Creating the Looker Studio report** \
+
+This <a href ="https://lookerstudio.google.com/u/0/reporting/f42c2d7f-a15d-4cc6-a8e7-0fa90685dbf0/page/p_k5114r9s9c" target="_blank">sample report </a> uses a synthetic supply chain dataset to display purchase order (PO) information by PO Status along with PO Line and Advanced Shipping Notice (ASN) details. The report can be filtered by a specific Shipping Node, PO Type and date range. \
+
+To use your own data for this report, follow these steps:\
+1) Make a <a href ="https://support.google.com/looker-studio/answer/7175478?hl=en#zippy=%2Cin-this-article" target="_blank">copy </a>of this report
+2) In your copied report, click the Edit button to go into Edit mode on the report
+3) In the Data pane, hover over the BigQuery icon and click the "Edit data source" icon.
+4) In the data editing screen that appears, click Edit Connection
+5) Select your BigQuery billing project, dataset and table/view where your data is stored.
+
+* Additional details on editing a Looker Studio data source can be found <a href ="https://support.google.com/looker-studio/answer/7178497?hl=en#zippy=%2Cin-this-article" target="_blank">here </a>.\
+
+* Note that your data source schema must match the schema of the sample data. Use the code repository referenced above to generate the source schema and synthetic data.\
 
 
