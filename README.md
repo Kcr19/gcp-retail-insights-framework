@@ -11,18 +11,18 @@ Looker Studio dashboards focusing on common use cases
 
 ## Prerequisites
 ### Software requirements
-If you are running the RetailModel Package in 
+If you are running the RetailModel Package in
 
 **Local machine** \
 Download Terraform \
 Run ```terraform --version ``` to check if terraform is installed \
 Download Python Version 3 \
-Run ```python3 --version ``` to check the version of Python 
+Run ```python3 --version ``` to check the version of Python
 
 **Cloud Shell** \
-None 
+None
 
-**Authentication & Project Setup** \
+### Authentication & Project Setup \
 The Retail Model uses ADC to build the required GCP infrastructure.
 This step is needed only if your running Retail Model from your local machine
 Open command prompt. To create your credentials file run the following command - \
@@ -32,27 +32,27 @@ Optional: To list all the project properties, run: \
 To ensure you are doing this in the correct project be sure to check and/or set it. \
 ``gcloud config set project [PROJECT_ID] ``
 
-**Permissions**\
+### Permissions \
 Permissions needed (for the id you are running this with)\
 ``roles/bigquery.dataEditor``
 ``roles/storage.admin``
 
-### Download Retail Model 
+### Download Retail Model
 Clone Retail Model repo. \
 ``git clone https://github.com/Kcr19/gcp-retail-insights-framework``
 
-**Deploy Retail Model in your project**\
+### Deploy Retail Model in your project \
 cd into the RetailModel folder [Time: 5 mins]\
-``python3 main.py`` 
+``python3 main.py``
 
-**Deleting Retail Model Infrastructure (optional)** \
-If for any reason, data is missing or if you would like to delete the Google Cloud resources created, run the below code in your terminal.  Reference 
+### Deleting Retail Model Infrastructure (optional) \
+If for any reason, data is missing or if you would like to delete the Google Cloud resources created, run the below code in your terminal.  Reference
 cd into src/iac to run terraform destroy \
-``terraform destroy -var "project=<your-project-name>"`` 
+``terraform destroy -var "project=<your-project-name>"``
 
 ### Creating the Looker Studio report
 
-This <a href ="https://lookerstudio.google.com/u/0/reporting/f42c2d7f-a15d-4cc6-a8e7-0fa90685dbf0/page/p_k5114r9s9c" target="_blank">sample report </a> uses a synthetic supply chain dataset to display purchase order (PO) information by PO Status along with PO Line and Advanced Shipping Notice (ASN) details. The report can be filtered by a specific Shipping Node, PO Type and date range. 
+This <a href ="https://lookerstudio.google.com/u/0/reporting/f42c2d7f-a15d-4cc6-a8e7-0fa90685dbf0/page/p_k5114r9s9c" target="_blank">sample report </a> uses a synthetic supply chain dataset to display purchase order (PO) information by PO Status along with PO Line and Advanced Shipping Notice (ASN) details. The report can be filtered by a specific Shipping Node, PO Type and date range.
 
 To use your own data for this report, follow these steps:
 1) Make a <a href ="https://support.google.com/looker-studio/answer/7175478?hl=en#zippy=%2Cin-this-article" target="_blank">copy </a>of this report
@@ -64,5 +64,3 @@ To use your own data for this report, follow these steps:
 * Additional details on editing a Looker Studio data source can be found <a href ="https://support.google.com/looker-studio/answer/7178497?hl=en#zippy=%2Cin-this-article" target="_blank">here </a>.
 
 * Note that your data source schema must match the schema of the sample data. Use the code repository referenced above to generate the source schema and synthetic data.
-
-
