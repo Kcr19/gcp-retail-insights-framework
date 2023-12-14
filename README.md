@@ -43,4 +43,12 @@ Clone Retail Model repo. \
 
 **Deploy Retail Model in your project**\
 cd into the RetailModel folder [Time: 5 mins]\
-``python3 main.py``
+``python3 main.py`` \
+
+**Deleting Retail Model Infrastructure (optional)** \
+If for any reason, data is missing or if you would like to delete the Google Cloud resources created, run the below code in your terminal. \ Reference 
+cd into src/iac to run terraform destroy \
+``terraform destroy -var "project=<your-project-name>"``
+
+
+
