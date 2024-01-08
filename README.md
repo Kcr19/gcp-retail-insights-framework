@@ -11,62 +11,86 @@ Looker Studio dashboards focusing on common use cases
 
 ## Prerequisites
 ### Software requirements
-If you are running the Retail Insights Framework Package in
+Local Machine
 
-**Local machine** \
+If you are running the Retail Insights Framework Package in local machine you will need to make sure terraform and python 3 are installed
+
 Download Terraform \
-Run ```terraform --version ``` to check if terraform is installed \
-Download Python Version 3 \
-Run ```python3 --version ``` to check the version of Python
+Run terraform version to check if terraform is installed 
+```
+terraform --version
+```
 
-**Cloud Shell** \
-None
+Check the version of the python and make sure python 3 is installed
 
-### Authentication & Project Setup 
+```
+python3 --version
+```
+
+**Cloud Shell** 
+
+If you are using Google Cloud shell you do not need terraform or python as they are preinstalled.
+
+### Authentication & Project Setup
 The Retail Insights Framework uses ADC to build the required GCP infrastructure.
 This step is needed only if your running Retail Insights Framework from your local machine
-Open command prompt. To create your credentials file run the following command - \
-``gcloud auth application-default login ``\
-Optional: To list all the project properties, run: \
-``gcloud config list --all`` \
-To ensure you are doing this in the correct project be sure to check and/or set it. \
-``gcloud config set project [PROJECT_ID] ``
+Open command prompt. To create your credentials file run the following command
 
-### Permissions 
-Permissions needed (for the id you are running this with)\
+```
+gcloud auth application-default login 
+```
+Optional: To list all the project properties, run: 
+```
+gcloud config list --all
+```
+To ensure you are doing this in the correct project be sure to check and/or set it. 
+```
+gcloud config set project [PROJECT_ID]
+```
+
+### Permissions
+Permissions needed (for the user id you are running this with)\
 ``roles/bigquery.dataEditor``
 ``roles/storage.admin``
 
 ### Download Retail Insights Framework
-Clone Retail Insights Framework repo. \
-``git clone https://github.com/Kcr19/gcp-retail-insights-framework``
+Clone Retail Insights Framework repo. 
+```
+git clone https://github.com/googlecloudplatform/gcp_retail_insights_framework
+```
 
-### Deploy Retail Insights Framework in your project 
-change directory into the Retail Insights Framework folder \
-``cd gcp-retail-insights-framework `` \
-Run the Python application main.py which will install the entire framework on GCP \
-``python3 main.py`` \
+### Deploy Retail Insights Framework in your project
+change directory into the Retail Insights Framework folder 
+```
+cd gcp_retail_insights_framework 
+```
+Run the Python application main.py which will install the entire framework on GCP 
+```
+python3 main.py
+```
 Estimated time - 5 minutes
 
 Ensure the following objects have been created in your project:
 
 *GCS Buckets(ensure there are files in these buckets):*\
 
-![alt text](https://github.com/Kcr19/gcp-retail-insights-framework/blob/8b31ae7c28e2027500445a419202cbad1743bebc/src/images/gcs_buckets_01.png)
+![alt text](/src/images/gcs_buckets_01.png)
 
 *BQ Datasets, tables and views(ensure there is data in these objects):*\
 
-![alt text](https://github.com/Kcr19/gcp-retail-insights-framework/blob/8b31ae7c28e2027500445a419202cbad1743bebc/src/images/bq_dataset_image_01.png)
+![alt text](/src/images/bq_dataset_image_01.png)
 
 
-### Deleting Retail Insights Framework Cloud resources (optional) 
+### Deleting Retail Insights Framework Cloud resources (optional)
 If for any reason, data is missing or if you would like to delete the Google Cloud resources created, run the below code in your terminal.  Reference
-cd into src/iac to run terraform destroy \
-``terraform destroy -var "project=<your-project-name>"``
+cd into src/iac to run terraform destroy 
+```
+terraform destroy -var "project=<your-project-name>"
+```
 
 ### Creating the Looker Studio report
 
-![alt text](https://github.com/Kcr19/gcp-retail-insights-framework/blob/8b31ae7c28e2027500445a419202cbad1743bebc/src/images/image_looker_dash.png)
+![alt text](/src/images/image_looker_dash.png)
 
 
 This <a href ="https://lookerstudio.google.com/u/0/reporting/f42c2d7f-a15d-4cc6-a8e7-0fa90685dbf0/page/p_k5114r9s9c" target="_blank">sample report </a> uses a synthetic supply chain dataset to display purchase order (PO) information by PO Status along with PO Line and Advanced Shipping Notice (ASN) details. The report can be filtered by a specific Shipping Node, PO Type and date range.
