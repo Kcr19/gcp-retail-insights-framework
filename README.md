@@ -56,13 +56,13 @@ Permissions needed (for the user id you are running this with)\
 ### Download Retail Insights Framework
 Clone Retail Insights Framework repo. 
 ```
-git clone https://github.com/googlecloudplatform/gcp_retail_insights_framework
+git clone https://github.com/Kcr19/gcp-retail-insights-framework
 ```
 
 ### Deploy Retail Insights Framework in your project
 change directory into the Retail Insights Framework folder 
 ```
-cd gcp_retail_insights_framework 
+cd gcp-retail-insights-framework 
 ```
 Run the Python application main.py which will install the entire framework on GCP 
 ```
