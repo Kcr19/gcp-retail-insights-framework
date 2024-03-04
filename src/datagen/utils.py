@@ -1,6 +1,7 @@
 import os
 import json
 import random
+import math
 
 from faker import Faker
 from datetime import date
@@ -22,21 +23,28 @@ from tables import Associate
 from tables import OrderLine
 from tables import ProductPrice
 from tables import Replenishment
+from tables import Inventory
+from tables import Forecast
+from tables import ContinuousLedger
 from datetime import datetime as dt
 from datetime import timedelta as td
 
 fake = Faker()
 
 NO_OF_RECORDS = 1000
+NUM_PRODUCTS = 10
+NUM_NODES = 25
 
 PII_TOKEN = list(str(fake.isbn10()) for _ in range(NO_OF_RECORDS))
 ORDER_ID = list("order-" + str(fake.unique.ean(length=8)) for _ in range(NO_OF_RECORDS))
 ASSOCIATE_ID = list("associate-" + str(fake.unique.ean(length=8)) for _ in range(NO_OF_RECORDS))
 TRADE_PARTNER_ID = list("trade-" + str(fake.unique.ean(length=8)) for _ in range(NO_OF_RECORDS))
-NODE_ID = list(str(fake.unique.ean(length=8)) for _ in range(int(NO_OF_RECORDS)))
+NODE_ID = list(str(fake.unique.ean(length=8)) for _ in range(int(NUM_NODES)))
 LAYOUT_ID = list(str(fake.iban()) for _ in range(NO_OF_RECORDS))
 LOYALTY_ID = list(str(fake.iban()) for _ in range(NO_OF_RECORDS))
-PRODUCT_ID = list(str(fake.pystr()) for _ in range(NO_OF_RECORDS))
+PRODUCT_ID = list(str(fake.pystr()) for _ in range(NUM_PRODUCTS))
+INVENTORY_ID = list(str(fake.pystr()) for _ in range(NO_OF_RECORDS))
+FORECAST_ID = list(str(fake.pystr()) for _ in range(NO_OF_RECORDS))
 CUSTOMER_ID = list(fake.iban() for _ in range(NO_OF_RECORDS))
 PO_NUMBER = list("po-" + str(fake.unique.ean(length=8)) for _ in range(int(NO_OF_RECORDS / 10)))
 ASN_ID = list("asn-" + str(fake.iban()) for _ in range(NO_OF_RECORDS))
@@ -45,13 +53,17 @@ PO_LINE_NUMBER = list(''.join([random.choice('0123456789') for _ in range(13)]) 
 
 def get_create_date():
     create_date = dt.now() - \
-                  td(days=random.randint(1, 365),
+                  td(days=random.randint(1, 365*2),
                      hours=random.randint(1, 24),
                      minutes=random.randint(1, 60),
                      seconds=random.randint(1, 60)
                      )
     return create_date
 
+def get_random_future_date():
+    future_date = dt.now() + \
+                  td(days=random.randint(30, 730))
+    return future_date
 
 def get_year():
     start = date(2010, 1, 1)
@@ -90,17 +102,23 @@ def generate_data():
     print("Data Generation started")
     create_json(data=PII.data_generator(count=NO_OF_RECORDS, ids=PII_TOKEN), table_name="PII")
     create_json(data=Task.data_generator(count=NO_OF_RECORDS), table_name="RefTask")
-    create_json(data=Product.data_generator(count=NO_OF_RECORDS, ids=PRODUCT_ID), table_name="RefProduct")
+    create_json(data=Product.data_generator(count=NUM_PRODUCTS, ids=PRODUCT_ID), table_name="RefProduct")
     create_json(data=Layout.data_generator(count=NO_OF_RECORDS, ids=LAYOUT_ID), table_name="NodeLayout")
     create_json(data=Customer.data_generator(count=NO_OF_RECORDS, node_ids=CUSTOMER_ID,
                                              loyalty_ids=LOYALTY_ID), table_name="RefCustomer")
     create_json(data=Associate.data_generator(count=NO_OF_RECORDS, ids=ASSOCIATE_ID),
                 table_name="RefAssociate")
-    create_json(data=Node.data_generator(count=NO_OF_RECORDS, ids=NODE_ID), table_name="RefNode")
+    create_json(data=Node.data_generator(count=NUM_NODES, ids=NODE_ID), table_name="RefNode")
     create_json(data=Trade.data_generator(count=NO_OF_RECORDS, ids=TRADE_PARTNER_ID),
                 table_name="RefTradePartner")
-    create_json(data=Replenishment.data_generator(count=NO_OF_RECORDS, ids=PRODUCT_ID),
+    create_json(data=Replenishment.data_generator(count=NUM_PRODUCTS, ids=PRODUCT_ID),
                 table_name="RefReplenishment")
+    create_json(data=Inventory.data_generator(count=NO_OF_RECORDS,inv_ids=INVENTORY_ID, prod_ids=PRODUCT_ID),
+                table_name="RefInventory")
+    create_json(data=Forecast.data_generator(count=math.floor(NO_OF_RECORDS), fcst_ids=FORECAST_ID, prod_ids=PRODUCT_ID),
+                table_name="RefForecast")
+    create_json(data=ContinuousLedger.data_generator(count=NO_OF_RECORDS, ids=PRODUCT_ID),
+                table_name="RefContinuousLedger")
     create_json(
         data=Orders.data_generator(count=NO_OF_RECORDS, order_ids=ORDER_ID, customer_ids=CUSTOMER_ID,
                                    associate_ids=ASSOCIATE_ID), table_name="SalesOrder")

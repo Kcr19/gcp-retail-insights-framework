@@ -1,0 +1,62 @@
+[
+  {
+  "name": "DistributionCenterId",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "ProductId",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "Category",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "ExpiryDate",
+  "type": "TIMESTAMP",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "DemandAmt",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "DemandUnits",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "InventoryOnHandAmt",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "InventoryOnHandUnits",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "EOMInventoryAmount",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "EOMInventoryUnits",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "ScrapInventoryAmount",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "ScrapInventoryUnits",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  }
+]

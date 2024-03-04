@@ -61,6 +61,11 @@ rcim_table = [
   },
   {
     dataset_id = "retail_dataset"
+    table_id   = "RefInventory"
+    schema_id  = "RefInventory.json"
+  },
+  {
+    dataset_id = "retail_dataset"
     table_id   = "SalesOrder"
     schema_id  = "SalesOrder.json"
   },

@@ -1,0 +1,22 @@
+[
+  {
+  "name": "LocationNode",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "ProductId",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "DemandDate",
+  "type": "TIMESTAMP",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "Quantity",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  }
+]

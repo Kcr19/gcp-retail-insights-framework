@@ -1,0 +1,26 @@
+[{
+  "name": "InventoryId",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "LocationNode",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "ProductId",
+  "type": "STRING",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "MfgDate",
+  "type": "TIMESTAMP",
+  "mode": "NULLABLE"
+  },
+  {
+  "name": "Quantity",
+  "type": "INTEGER",
+  "mode": "NULLABLE"
+  }
+]
