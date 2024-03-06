@@ -37,7 +37,7 @@ def product_data():
     gcp_brick = random.choice(["brick-10001686", "brick-10005726", "brick-10000666"])
     division = random.choice(['A', 'B', 'C', 'D', 'F'])
     department = random.choice(["stores", "finance", "marketing", "sales", "merchandising"])
-    product_class = random.choice(["Apparel", "Consumer electronics"])
+    product_class = random.choice(["Toothpaste", "Mouthwashes & Rinses", "Whitening Kits", "Toothbrushes", "Kids"])
 
     if product_class == "Apparel":
         style = random.choice(["80's", "summer", "winter", "spring"])
@@ -62,6 +62,7 @@ def product_data():
     inner_pack_quantity = random.choice([prepack_quantity, prepack_quantity - random.randrange(0, 20)])
     hazmat_class = random.randrange(1, 9)
 
+    shelf_life_days = 730
     is_perishable = random.choice(["TRUE", "FALSE"])
     is_temprature_controled = random.choice(["TRUE", "FALSE"])
     is_durable = random.choice(["TRUE", "FALSE"])
@@ -117,6 +118,7 @@ def product_data():
         "PrepackQuantity": prepack_quantity,
         "InnerPackQuantity": inner_pack_quantity,
         "HazmatClass": hazmat_class,
+        "ShelfLifeDays": shelf_life_days,
         "IsPerishable": is_perishable,
         "IsTempratureControlled": is_temprature_controled,
         "IsDurable": is_durable,

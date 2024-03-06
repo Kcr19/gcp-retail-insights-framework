@@ -4,13 +4,13 @@
     "type": [
       "object",
       {
-        "keerthi-demo_retail_if_9raw": "string",
-        "keerthi-demo_retail_if_9sample": "string"
+        "colgate-scm-demo_retail_if_raw": "string",
+        "colgate-scm-demo_retail_if_sample": "string"
       }
     ],
     "value": {
-      "keerthi-demo_retail_if_9raw": "keerthi-demo_retail_if_9raw",
-      "keerthi-demo_retail_if_9sample": "keerthi-demo_retail_if_9sample"
+      "colgate-scm-demo_retail_if_raw": "colgate-scm-demo_retail_if_raw",
+      "colgate-scm-demo_retail_if_sample": "colgate-scm-demo_retail_if_sample"
     }
   }
 }

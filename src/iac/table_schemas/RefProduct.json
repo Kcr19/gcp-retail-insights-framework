@@ -195,6 +195,11 @@
     "mode": "NULLABLE"
   },
   {
+    "name": "ShelfLifeDays",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
     "name": "IsPerishable",
     "type": "BOOLEAN",
     "mode": "NULLABLE"
